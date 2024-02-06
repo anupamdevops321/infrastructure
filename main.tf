@@ -45,7 +45,7 @@ resource "aws_security_group" "instance_sg" {
 resource "aws_instance" "instance" {
   ami                = "ami-06aa3f7caf3a30282"  
   instance_type      = "t2.micro"
-  key_name           = "project1"
+  key_name           = "project5"
   subnet_id          = aws_subnet.subnet[0].id
   vpc_security_group_ids = [aws_security_group.instance_sg.id]
 
