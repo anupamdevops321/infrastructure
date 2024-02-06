@@ -18,10 +18,10 @@ jobs:
       with:
         terraform_version: 1.6.6
 
-    # - name: Configure AWS credentials
-    #   run: |
-    #     mkdir -p ~/.aws
-    #     echo -e "[default]\naws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}\naws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" > ~/.aws/credentials
+    - name: Configure AWS credentials
+      run: |
+        mkdir -p ~/.aws
+        echo -e "[default]\naws_access_key_id=${{ secrets.AWS_ACCESS_KEY_ID }}\naws_secret_access_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" > ~/.aws/credentials
 
     - name: Initialize Terraform
       run: terraform init
