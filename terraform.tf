@@ -7,7 +7,7 @@ terraform {
     }
   }
      backend "s3" {
-       bucket = "s7remotestatelock"
+       bucket = "s7remotestatelock7"
        key = "terraform/remotestate/terraform.tfstate"
        region = "us-east-1"
        dynamodb_table = "s7table"
